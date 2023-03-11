@@ -1,37 +1,49 @@
-// import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react'
 
-import './card.css';
-import { UserOne, UserTwo } from './Card';
-
-function App() {
-  const User1 = {
-    name: "Amit",
-    image: "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg",
-    designation: "Graphic Designer",
-    description: "Highly creative and multitalented Graphic Designer with extensive experience in multimedia, marketing, and print design."
-  }
-  const User2 = {
-    name: "Ruhi",
-    image: "https://images.pexels.com/photos/3775131/pexels-photo-3775131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    description: "perform a variety of music for recordings and live audiences. They audition for positions in choruses, orchestras, bands, plays, 				and other types of music groups. ",
-    designation: "Singer"
-  }
-
-  return (
-   
-        
-       <div>
-            <UserOne image={User1.image} name={User1.name} designation={User1.designation} description={User1.description} />
-      <UserTwo image={User2.image} name={User2.name} designation={User2.designation} description={User2.description} />
-       </div> 
-          
-      
-      
-
-
+  function App() {
+  const [Data,setData]=useState(0)
+  
 
     
+  
+  
+
+
+  
+  
+  return(
+    <div>
+      <input text=""></input>
+      <button>add</button>
+
+      <h3> do some work out !!</h3>
+      <h4>talk to sahil !!</h4>
+     
+      
+     
+      <h2> {Data}</h2>
+
+
+      <button on onClick={()=>setData(Data+1)}>increase count </button>   {'\n'} 
+      
+      
+      <button on onClick={()=>setData(Data-1)}>decrease count </button>  {'\n'} 
+
+      <h1>my name is Amit </h1>
+      <button onclick="wxy">change name</button>
+
+     
+      
+    </div>
   )
-}
-export default App; 
+  } 
+  function wxy(){
+    return <h1>my name is akash</h1>
+  }
+  
+
+
+
+  
+
+export default App;
